@@ -2,6 +2,21 @@ execute pathogen#infect()
 set nocompatible                  " explicitely get out of vi-compatible mode
 filetype plugin indent on         " load filetype-based indentation
 
+
+" see http://vim.wikia.com/wiki/Detect_non-Unicode_Xterms
+if has("multi_byte")
+  set encoding=utf-8
+  if $TERM == "linux" || $TERM_PROGRAM == "GLterm"
+    set termencoding=latin1
+  endif
+  if $TERM == "xterm" || $TERM == "xterm-color"
+    let propv = system("xprop -id $WINDOWID -f WM_LOCALE_NAME 8s ' $0' -notype WM_LOCALE_NAME")
+    if propv !~ "WM_LOCALE_NAME .*UTF.*8"
+      set termencoding=latin1
+    endif
+  endif
+endif
+
 " Apprearance
 set background=dark               " optimize for dark background
 syntax on                         " turn on syntax highlighting
