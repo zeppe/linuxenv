@@ -1,4 +1,4 @@
 linuxenv
 ========
 
-linux environment configuration files, to be shared across machines
+linux environment configuration files, to be shared across machines.
