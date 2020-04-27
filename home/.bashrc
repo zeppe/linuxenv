@@ -131,6 +131,13 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+if [ ! -e ~/.bash/git-aware-prompt ]; then
+    mkdir -p ~/.bash
+    cd ~/.bash
+    git clone git://github.com/jimeh/git-aware-prompt.git
+    cd ..
+fi
+
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 
@@ -166,6 +173,9 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
