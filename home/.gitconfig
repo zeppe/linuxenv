@@ -1,0 +1,9 @@
+[user]
+    email = giuseppe.passino@gmail.com
+    name = Peppe
+
+[alias]
+    logdog = log --decorate --oneline --graph
+    logdoga = log --decorate --oneline --graph --all
+    la = log --decorate --oneline --graph --all
+
