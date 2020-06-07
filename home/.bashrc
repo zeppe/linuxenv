@@ -193,7 +193,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# added by Anaconda 2.1.0 installer
-# export PATH="/home/gpassino/anaconda/bin:$PATH"
-alias anaconda='export PATH="/home/gpassino/anaconda/bin:$PATH"'
-
+export PATH=~/bin:~/.local/bin:$PATH
