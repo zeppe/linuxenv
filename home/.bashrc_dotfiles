@@ -91,3 +91,6 @@ source $GITAWAREPROMPT/main.sh
 
 export PS1="${debian_chroot:+($debian_chroot)}\[\e[31m\]\$(byobu_prompt_status)\[\e[38;5;69m\]\u\[\e[38;5;214m\]@\[\e[38;5;167m\]\h\[\e[38;5;214m\]:\[\e[38;5;71m\]\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[\e[38;5;214m\]\$(byobu_prompt_symbol)\[\e[00m\] "
 
+# last of files
+function lof { echo `ls -t ${@}* | head -1` ; }
+
