@@ -7,3 +7,6 @@
     logdoga = log --decorate --oneline --graph --all
     la = log --decorate --oneline --graph --all
 
+[core]
+        editor = nvim
+
